@@ -1,0 +1,25 @@
+﻿div.msgBox { padding: 4px 10px 4px 10px; position: absolute; z-index: 1000; font-family: Verdana; color: #00335e; background: #ffffff; -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); z-index: 9999999; }
+div.msgBoxBackGround { top: 0; left: 0; position: absolute; padding: 0; margin: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.9; z-index: 9999; } 
+div.msgBoxTitle { padding: 5px 0 5px 0; font-variant: small-caps; font-size: 16px; font-weight: lighter; color: #3B4966; width: 100%; }
+div.msgBoxContent { font-size: 12px; float: left; width: 100%; margin-top: 10px; font-weight: 600; margin-bottom: 10px; text-align: center; max-height: 180px; overflow-y: auto; }
+div.msgBoxButtons { width: 100%; text-align: right; padding-top: 10px; padding-bottom: 10px; }
+div.msgBoxButtonsCentered { width: 100%; text-align: center; padding-top: 60px; padding-bottom: 10px; }
+div.msgBoxButtonsCentered .msgButton:first-of-type { margin-left: 0; }
+.msgButton { cursor: pointer; -webkit-appearance: button; display: inline-block; padding: 6px 12px; margin-top: 5px; margin-left: 5px; margin-bottom: 0; font-size: 12px; font-weight: normal; line-height: 1.428571429; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; border: 1px solid transparent; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none; user-select: none; color: #FFFFFF; border-color: #3B4966; background-color: #3B4966; min-width: 50px; }
+.msgButton:hover,
+.msgButton:focus,
+.msgButton:active { background-color: #4A5D82; border-color: #3B4966; color: #FFFFFF; }
+.msgBox-error-holder { margin-top:45px; text-align:left; }
+.msgBox-error-holder a { font-size:10px; color:#4A5D82; text-decoration:none; }
+#msgBox-error-details { display:none; border: none; width: 100%; border: 1px solid transparent; resize: none; height: 60px; font-size: 10px; }
+#msgBox-error-details:active, 
+#msgBox-error-details:hover { border: 1px solid #808080; }
+
+@media screen and (max-width: 400px) {
+    div.msgBox { top: 100px; left: 50%; width: 300px; margin-left: -150px; }
+    div.msgBoxContent { text-align: justify; }
+    div.msgBoxButtonsCentered .msgButton { width: 100%; margin-left: 0; }
+}
+@media screen and (min-width: 420px) {
+    div.msgBox { top: 180px; left: 50%; width: 410px; margin-left: -205px; }
+}

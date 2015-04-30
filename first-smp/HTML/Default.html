@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SKMPlugin17</title>
+    <!-- Folha de estilos da aplicação -->
+    <link rel="stylesheet" media="screen" href="Content/css/default.css" />
+    <!-- Scripts da aplicação -->
+    <script type="text/javascript" src="Content/js/libs/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="Content/js/libs/knockout-3.2.0.min.js"></script>
+    <script type="text/javascript" src="Content/js/libs/common.js"></script>
+    <script type="text/javascript" src="Content/js/libs/custom/msgbox-custom-schalter.js"></script>
+    <script type="text/javascript" src="Content/js/Application.js"></script>
+</head>
+<body>
+    <!-- Conteiner principal da aplicão -->
+    <div id="sch-main">
+        <!-- Cabeçalho da aplicação -->
+        <header class="sch-row">
+            <div class="sch-col-2-4">
+                <!-- Elemento conteiner para logo do cliente -->
+                <h1 data-bind="attr: { class: AppLanguage() }"></h1>
+            </div>
+            <div class="sch-col-2-4">
+                <!-- Lista de idiomas disponíveis -->
+                <ul id="language-flags">
+                    <li data-bind="click: function(){ CurrentLanguage('pt-BR'); }, visible: CurrentLanguage() == 'pt-BR' ? false : true"></li>
+                    <li data-bind="click: function(){ CurrentLanguage('es-ES'); }, visible: CurrentLanguage() == 'es-ES' ? false : true"></li>
+                    <li data-bind="click: function(){ CurrentLanguage('en-US'); }, visible: CurrentLanguage() == 'en-US' ? false : true"></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Seção principal da aplicação -->
+        <section>
+            <!-- Loader da página -->
+            <div id="page-loader" data-bind="visible: IsLoading()"></div>
+            <!-- Tela de descanso da aplicação -->
+            <div id="screen-saver">
+                <div class="sch-row">
+                    <div class="sch-col-4-4">
+                        <h2>Schalter</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Mensagem de erro -->
+            <div id="error-window" data-bind="visible: ErrorWindowVisible()" style="display:none;">
+                <div class="overlay"></div>
+                <div class="window-content">
+                    <div>
+                        <h3 data-bind="text: ErrorWindowTitle"></h3>
+                        <p data-bind="text: ErrorWindowText"></p>
+                        <ul>
+                            <li><button type="button">Ok</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Mensagem de sucesso -->
+            <div id="success-window" data-bind="visible: SuccessWindowVisible()" style="display:none;">
+                <div class="overlay"></div>
+                <div class="window-content">
+                    <div>
+                        <h3 data-bind="text: SuccessWindowTitle"></h3>
+                        <p data-bind="text: SuccessWindowText"></p>
+                        <ul>
+                            <li><button type="button">Ok</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="page-block">
+                <!-- Conteiner principal onde são exibidas as "PartialViews" -->
+                <div id="page-content"></div>
+            </div>
+        </section>
+
+        <!-- Rodapé da aplicação -->
+        <footer class="sch-row" data-bind="attr: { 'class': FooterWithButtons() ? 'sch-row visible' : 'sch-row' }">
+            <!-- Parte esquerda do rodapé -->
+            <div class="sch-col-1-3">
+                <ul>
+                    <li>&nbsp;</li>
+                </ul>
+            </div>
+            <!-- Parte central do rodapé -->
+            <div class="sch-col-1-3">
+                <ul>
+                    <li>
+                        <!-- GO HOME | Botão que faz retornar para a tela de opções da aplicação -->
+                        <button type="button" class="navigation-button" data-bind="click: GoHome, visible: ButtonHomeVisible()"><i class="fa fa-home"></i></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Parte direita do rodapé -->
+            <div class="sch-col-1-3">
+                <ul>
+                    <li>
+                        <!-- PREVIOUS VIEW | Botão que faz retornar para a view anterior -->
+                        <button type="button" class="navigation-button" data-bind="click: GoToPreviowsView, visible: ButtonBackVisible()"><i class="fa fa-reply-all"></i></button>
+                    </li>
+                    <li>
+                        <!-- EXIT | Botão que encerra a seção atual e carrega a tela de opções -->
+                        <button type="button" class="navigation-button" data-bind="click: ExitCurrentSession, visible: ButtonExitVisible()"><i class="fa fa-times"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

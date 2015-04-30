@@ -1,0 +1,66 @@
+﻿/*** Definições de estilos estruturais ***/
+
+body { font-family:Arial; }
+
+h2 { margin-bottom:30px; }
+
+#language-flags,
+#error-window .window-content div,
+#success-window .window-content div { -webkit-box-sizing:border-box; box-sizing:border-box; }
+
+/*** Estilo do cabeçalho da aplicação ***/
+header h1 { width:500px; height:54px; margin:20px; } /*** Define dimenções do conteiner do logo do cliente ***/
+
+/*** Estilos do rodapé ***/
+footer { width:100%; height:0; position:fixed; bottom:0; left:0; -webkit-transition: all 500ms; transition: all 500ms; }
+footer.sch-row { padding: 0; }
+footer.visible { height: 56px; padding: 1% 0; }
+footer [class*='sch-col-']:nth-child(2) { text-align:center; }
+footer [class*='sch-col-']:nth-child(3) { text-align:right; }
+footer [class*='sch-col-']:nth-child(3) ul { overflow:auto; float:right; }
+footer [class*='sch-col-']:nth-child(3) ul li { float:left; }
+footer [class*='sch-col-']:nth-child(3) ul li button { margin-left:15px; }
+
+/*** Estilo dos botões da aplicação ***/
+button { padding:10px 20px; border-radius:5px; }
+/*** Estilo dos botões do rodapé ***/
+button.navigation-button { width:58px; padding:5px 10px; font-size:40px; text-align:center; }
+
+/*** Estilo das bandeiras de idiomas ***/
+#language-flags { width:100%; padding:10px 20px 0 20px; text-align:right; }
+#language-flags li { width:64px; height:64px; margin-left:10px; display:inline-block; opacity:0.5; }
+#language-flags li:active { opacity:1; }
+
+/*** Estilo do loader da página ***/
+#sch-main #page-loader { width:100%; height:100%; position:absolute; top:0; left:0; z-index:9999; }
+
+/*** Estilo da tela de descanso ***/
+#sch-main #screen-saver { width:100%; height:0; position:absolute; top:0; left:0; z-index:9999; opacity:0; -webkit-transition:opacity 250ms; transition:opacity 250ms; }
+#sch-main #screen-saver.visible { opacity:1; }
+#sch-main #screen-saver h2 { width:500px; height:54px; margin:-27px 0 0 -250px; text-align:center; position:absolute; top:50%; left:50%; text-indent:-9999px; }
+
+/*** Mensagem de erro ***/
+#error-window .overlay { width:100%; height:100%; position:fixed; top:0; left:0; z-index:9998; }
+#error-window .window-content { width:30%; height:auto; margin:-15% 0 0 -15%; border-radius:3px; position:fixed; top:50%; left:50%; z-index:9999; }
+#error-window .window-content div { width:100%; height:auto; padding:20px; position:relative; }
+#error-window .window-content div h3 { margin-bottom:10px; }
+#error-window .window-content div p  { margin:0 0 15px 0; }
+#error-window .window-content div ul { text-align:center; }
+#error-window .window-content div ul li button { font-size:20px; }
+
+/*** Mensagem de sucesso ***/
+#success-window .overlay { width:100%; height:100%; position:fixed; top:0; left:0; z-index:9998; }
+#success-window .window-content { width:30%; height:auto; margin:-15% 0 0 -15%; border-radius:3px; position:fixed; top:50%; left:50%; z-index:9999; }
+#success-window .window-content div { width:100%; height:auto; padding:20px; position:relative; }
+#success-window .window-content div h3 { margin-bottom:10px; }
+#success-window .window-content div p { margin:0 0 15px 0; }
+#success-window .window-content div ul { text-align:center; }
+#success-window .window-content div ul li button { font-size:20px; }
+
+/*** Views ***/
+#view1-view button { margin: -75px 0 0 -190px; display: block; width: 380px;height: 150px;position: absolute;top: 50%;left: 50%; text-align: center; }
+#view1-view button .label { font-size: 35px;font-weight: 900;display: block;}
+#view1-view button .descr { font-size: 20px; }
+
+#view2-view #text-block-messages { text-align:center; margin-top: 116px; }
+

@@ -1,0 +1,12 @@
+﻿/* Centraliza as folhas estilo da aplicação em apenas um documento */
+@import url(sch-reset.css); /* Sobrescreve a folha de estilo padrão do navegador pelas regras aqui definidas */
+
+@import url(sch-grid.css); /* Framework do grid de layout */
+
+@import url(sch-structure.css); /* Folha de estilo da estrutura dos elementos da aplicação */
+
+@import url(font-awesome.min.css); /* Folha de estilo da biblioteca de ícones 'Font Awesome (http://fontawesome.io/ )' */
+
+@import url(msgbox.css); /* Folha de estilo 'msgbox' */
+
+@import url(sch-theme.css); /* Folha de estilo que contém o estilo de aparência (cores, imagens, etc) */

@@ -1,0 +1,164 @@
+﻿{
+    "en-US": {
+        "title": "Payment Sample Plug-In Configuration",
+        "type": "object",
+        "properties": {
+            "StringField": {
+                "required": true,
+                "title": "String Field Example",
+                "type": "string",
+                "description": "Write at least 3 characters just for testing purposes.",
+                "minLength": 3,
+                "maxLength": 50,
+                "attributes": [
+                    { "name": "data-vkeyboard", "value": "text" }
+
+                ]
+            },
+            "IntegerField": {
+                "required": true,
+                "title": "Integer Field Example",
+                "type": "integer",
+                "description": "Change for testing purposes.",
+                "default": 0,
+                "minimum": 0,
+                "maximum": 9999,
+                "attributes": [ 
+                    { "name": "data-vkeyboard", "value": "number" }
+                ]
+            },
+            "MultipleOptionString": {
+                "title": "Option String Field Example",
+                "type": "string",
+                "enum": [ "false", "true" ],
+                "options": {
+                    "enum_titles": [ "Commit", "Rollback" ]
+                }
+            },
+            "ArrayOptionsString": {
+                "title": "Select String Field Example",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "First Choice",
+                        "Second Choice",
+                        "Third Choice",
+                        "Fourth Choice",
+                        "Fifth Choice",
+                        "Sixth Choice"
+                    ]
+                },
+                "uniqueItems": true
+            }
+        }
+    },
+    "es-ES": {
+        "title": "Configuración del Plug-In Payment Sample",
+        "type": "object",
+        "properties": { 
+            "StringField": {
+                "required": true,
+                "title": "Ejemplo de Campo String",
+                "type": "string",
+                "description": "Escribe al menos 3 caracteres sólo para propósitos de prueba.",
+                "minLength": 3,
+                "maxLength": 50,
+                "attributes": [
+                    { "name": "data-vkeyboard", "value": "text" } 
+
+                ]
+            },
+            "IntegerField": {
+                "required": true,
+                "title": "Ejemplo de Campo Entero",
+                "type": "integer",
+                "description": "Cambio para propósitos de prueba.",
+                "default": 0,
+                "minimum": 0,
+                "maximum": 9999,
+                "attributes": [ 
+                    { "name": "data-vkeyboard", "value": "number" }
+                ]
+            },
+            "MultipleOptionString": {
+                "title": "Ejemplo de Campo de Elige String",
+                "type": "string",
+                "enum": [ "false", "true" ],
+                "options": {
+                    "enum_titles": [ "Aceptar", "Revertir" ]
+                }
+            },
+            "ArrayOptionsString": {
+                "title": "Ejemplo de Campo de Selección de String",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Primera Elección",
+                        "Segunda Elección",
+                        "Tercera Elección",
+                        "Cuarta Elección",
+                        "Quinta Elección",
+                        "Sexta Elección"
+                    ]
+                },
+                "uniqueItems": true
+            }
+        }
+    },
+    "pt-BR": {
+        "title": "Configuração de Plug-In Payment Sample",
+        "type": "object",
+        "properties": { 
+            "StringField": {
+                "required": true,
+                "title": "Exemplo de Campo String",
+                "type": "string",
+                "description": "Escreva pelo menos 3 caracteres para efeito de teste.",
+                "minLength": 3,
+                "maxLength": 50,
+                "attributes": [
+                    { "name": "data-vkeyboard", "value": "text" } 
+
+                ]
+            },
+            "IntegerField": {
+                "required": true,
+                "title": "Exemplo de Campo Inteiro",
+                "type": "integer",
+                "description": "Altere para testar.",
+                "default": 0,
+                "minimum": 0,
+                "maximum": 9999,
+                "attributes": [ 
+                    { "name": "data-vkeyboard", "value": "number" }
+                ]
+            },
+            "MultipleOptionString": {
+                "title": "Exemplo de Campo de Escolha de String",
+                "type": "string",
+                "enum": [ "false", "true" ],
+                "options": {
+                    "enum_titles": [ "Aceitar", "Reverter" ]
+                }
+            },
+            "ArrayOptionsString": {
+                "title": "Exemplo de Campo de Seleção de String",
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "enum": [
+                        "Primeira Escolha",
+                        "Segunda Escolha",
+                        "Terceira Escolha",
+                        "Quarta Escolha",
+                        "Quinta Escolha",
+                        "Sexta Escolha"
+                    ]
+                },
+                "uniqueItems": true
+            }
+        }
+    }
+}

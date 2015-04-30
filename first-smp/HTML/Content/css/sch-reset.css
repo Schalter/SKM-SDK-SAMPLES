@@ -1,0 +1,11 @@
+﻿/* Sobrescreve a folha de estilo padrão do navegador pelas regras aqui definidas */
+
+html,body,h1,h2,h3,h4,h5,h6,p,button,ul,ol,dl{margin:0;padding:0;}
+ul,ol{list-style:none;}
+button{border:none;background:transparent;cursor:pointer;   }
+a,a:hover,a:active{color:inherit;text-decoration:none;}
+input[type=text],input[type=password]{}
+textarea{font-family:inherit;resize:none;}
+
+/* Remove seleção do cursor do mouse */
+* { /*cursor:none;*/ -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; } 

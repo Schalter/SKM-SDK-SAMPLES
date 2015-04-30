@@ -1,0 +1,5 @@
+{
+    "MSG_RED": "El message ROJO",
+    "MSG_GREEN": "El message <span class=\"green-text\">VERDE</span>",
+    "MSG_BLUE": "Third message <span class=\"blue-text\">AZUL</span>"
+}
